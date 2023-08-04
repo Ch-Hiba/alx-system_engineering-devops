@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This code displays all active IPv4 IPs
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'
